@@ -14,7 +14,7 @@ import static org.springframework.http.RequestEntity.head;
 
 public class ListDEBikes {
     //head es el inicial de la lista, el primero
-    private Node head;
+    private static Node head;
 
     //tamaño de la lista
     private int size;
@@ -50,8 +50,31 @@ public class ListDEBikes {
 
 
 
-    public String add(Bike bike) {
-                return "bike añadida";
-        }
+
+
+    public static String add(Bike bike) {
+        //si la lista esta vacia simplemente se agrega a la cabeza
+        if (head == null) {
+            //guardamos al kid en un nodo DE y lo guardamos en la head
+            head = new Node(bike, null, null);
+        } else {//en caso que la cabeza si contenga alfo
+            Node temp = head;//creamos un temporal y lo igualamos a la cabeza
+            while (temp.getNext() != null) {//mientras que el siguiente del temporal sea diferente a null
+                temp = temp.getNext();//temporal pasa a ser el seguiente
+
+            }
+            //Ayudante esta en el ultimo
+            //guardamos al kid en un nodo DE
+            Node newNode = new Node(bike, null, temp);
+            //guardamos al nuevo nodo en el siguiente del temporal
+            temp.setNext(newNode);
+            //le sumamos uno al tamaño de la lista por el nuevo que se añadio
+
+
+
+        }//retornamos un mensaje que nos dice que si se pudo añadir al niño
+        return "la moto se agrego";
+    }
+
 
 }

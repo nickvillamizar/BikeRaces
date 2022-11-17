@@ -2,9 +2,12 @@ package com.umanizales.bikeraces.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalTime;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 
 
@@ -14,7 +17,7 @@ public class Bike {
     private   String color;
     private String state;
     private String pilot;
-    private LocalTime time=LocalTime.of(0,0,0);
+    private double time;
 
 
 
@@ -27,11 +30,17 @@ public class Bike {
 
 
 
-    public Bike(String numberBike, String color, String state, String name, double time) {
+    ///public Bike(String numberBike, String color, String state, String pilot, double time) {
+       /// this.numberBike=numberBike;
+        ///this.color=color;
+        ///this.state=state;
+        ///this.pilot=pilot;
+
     }
 
 
-}
+
+///}
 
 
 

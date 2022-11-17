@@ -1,6 +1,7 @@
 package com.umanizales.bikeraces.controller;
 
 import com.umanizales.bikeraces.model.Bike;
+import com.umanizales.bikeraces.model.ListDEBikes;
 import com.umanizales.bikeraces.service.ListDEBikesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping(path = "BikeRcaes")
+@RequestMapping(path = "BikeRaces")
 public class BikeController {
     @Autowired
     private ListDEBikesService listDEBikesService;
@@ -20,15 +21,16 @@ public class BikeController {
     //ya que entrariamos en un bucle por lo que toca sacar la informacion de cada niño
     //y pasarlo a una lista y esta es la que se muestra
     public List<Bike> getList() {
-        return listDEBikesService.getList();
+        System.out.println("holaaaaaaaaaaaaaaaaaaaaaaaaa");
+        return  listDEBikesService.getList();
+
     }
 
 
 
-    @PostMapping(path = "addBike")
-    public String addBike(@RequestBody Bike bike)
-    {
-        return listDEBikesService.add(bike);
+    @PostMapping(path = "addDE")//agregar niños en DE
+    public String add(@RequestBody Bike bike) {
+        return ListDEBikesService.add(bike);
     }
 }
 
