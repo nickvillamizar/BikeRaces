@@ -3,19 +3,21 @@ package com.umanizales.bikeraces.service;
 
 import com.umanizales.bikeraces.model.Bike;
 import com.umanizales.bikeraces.model.ListDEBikes;
+import com.umanizales.bikeraces.model.Node;
 import lombok.Data;
 import org.springframework.stereotype.Service;
 
+import java.lang.annotation.*;
 import java.util.List;
 
-
-@Data
-@Service
 
 
 
 public class ListDEBikesService {
-    public ListDEBikes listDEBikes;
+
+    public static ListDEBikes listDEBikes;
+    public Node head;
+
     public ListDEBikesService() {
         listDEBikes = new ListDEBikes();
         listDEBikes.add(new Bike("001", "azul","true","checo perez",5.6));
@@ -26,10 +28,24 @@ public class ListDEBikesService {
     }
 
     public List<Bike> getList(){
-        listDEBikes = new ListDEBikes();
+        ListDEBikes DEBikes = new ListDEBikes();
         listDEBikes.add(new Bike());
 
-        return listDEBikes.getList();
+        return ListDEBikes.getList();
+
+
+    }
+    public String addToStart(Bike bike){
+        ListDEBikes.addToStart(bike);
+        return "Se agrego";
+    }
+
+    public static String deletByPosition(int i){
+        return ListDEBikes.deletByPosition(i);
+    }
+
+    public static String deletByData(String numberBike){
+        return listDEBikes.deletByData(numberBike);
     }
 
 

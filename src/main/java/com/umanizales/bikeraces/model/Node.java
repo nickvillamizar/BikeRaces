@@ -19,4 +19,7 @@ public class Node {
 
     public Node(Bike bike, Object o, Node temp) {
     }
+
+    public void setPrevius(Object o) {
+    }
 }
