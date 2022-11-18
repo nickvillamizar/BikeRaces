@@ -15,32 +15,31 @@ import java.time.LocalTime;
 public class Bike {
     private String numberBike;
     private   String color;
-    private String state;
+    private boolean state;
     private String pilot;
     private double time;
 
+   
 
 
+ public Bike(String numberBike, String color, String state, String pilot, double time) {
+ }
 
 
-
-
-
-
-
-
-
-    ///public Bike(String numberBike, String color, String state, String pilot, double time) {
-       /// this.numberBike=numberBike;
-        ///this.color=color;
-        ///this.state=state;
-        ///this.pilot=pilot;
-
+    public Bike(String id, String color, boolean state,String pilot,double time) {
     }
 
+    public Bike(String s, String naranja, boolean b, String carlos_sainz) {
+    }
+
+    public Bike(String s, String blue, boolean b) {
+    }
+}
+     
 
 
-///}
+
+
 
 
 

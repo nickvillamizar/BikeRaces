@@ -23,6 +23,7 @@ import java.util.List;
 
 
 
+
 @RestController
 @RequestMapping(path = "BikeRaces")
 public class BikeController {
@@ -40,7 +41,7 @@ public class BikeController {
 
 
 
-    @PostMapping(path = "addDE")//agregar niños en DE
+    @PostMapping(path = "addDE")//agregar bikes en DE
     public String add(@RequestBody Bike bike) {
         return ListDEBikesService.add(bike);
     }

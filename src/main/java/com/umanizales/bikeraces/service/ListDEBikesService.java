@@ -20,11 +20,10 @@ public class ListDEBikesService {
 
     public ListDEBikesService() {
         listDEBikes = new ListDEBikes();
-        listDEBikes.add(new Bike("001", "azul","true","checo perez",5.6));
-        listDEBikes.add(new Bike("002", "rojo","true","charles lecrec",3.8));
-        listDEBikes.add(new Bike("003", "naranja","true","carlos sainz",2.9));
-        listDEBikes.add(new Bike("004", "verde","true","marx verstappen",1.8));
-        listDEBikes.add(new Bike("005", "negro","true","juan pablo montoya",6.5));
+        listDEBikes.add(new Bike("001", "azul",true,"checo perez",5.6));
+        listDEBikes.add(new Bike("002", "rojo",true,"charles lecrec",3.8));
+        listDEBikes.add(new Bike("003", "naranja",true,"carlos sainz",2.9));
+
     }
 
     public List<Bike> getList(){
